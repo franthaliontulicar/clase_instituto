@@ -12,7 +12,6 @@ public class Alumno
     
     private static int numAlumnosClase = 1;
 
-   
     private String nombre;
   
     private int edad;
@@ -34,16 +33,20 @@ public class Alumno
         numAlumnosClase += 1;
         notas = new ArrayListInt();
     }
-
+    /**
+     * Añadimos nota metida por parametro a la coleccion
+     */
     public void addNota(int nota)
     {
         notas.add(nota);
     }
 
-    
-    public int notaMedia()
+    /**
+     * Calculamos nota media del alumno
+     */
+    public float notaMedia()
     {
-        int sumatorio = 0;
+        float sumatorio = 0.0F;
         // Sumamos todos los elementos del array
         for(int i = 0; i < notas.size(); i++){
             sumatorio += notas.get(i);
