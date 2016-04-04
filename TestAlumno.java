@@ -21,15 +21,18 @@ public class TestAlumno
         nombres[1] = "David";
         nombres[2] = "Victor";
         nombres[3] = "Adan";
-        nombres[4] = "Manuel";
+        nombres[4] = "Jesus";
         Alumno alumno1 = creaAlumno();
         Alumno alumno2 = creaAlumno();
         Alumno alumno3 = creaAlumno();
         Alumno alumno4 = creaAlumno();
+        Alumno alumno5 = creaAlumno();
         System.out.println(alumno1.toString());
         System.out.println(alumno2.toString());
         System.out.println(alumno3.toString());
         System.out.println(alumno4.toString());
+        System.out.println(alumno5.toString());
+        
     }
      public Alumno creaAlumno()
     {

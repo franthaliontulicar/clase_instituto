@@ -7,24 +7,22 @@
  */
 public class Alumno
 {
-    // Nota minima de aprobado
-    public static final int NOTA_APROBADO = 5;
-    // Numero de alumnos en clase, para asignar
-    public static int numAlumnosClase = 1;
+    
+    private static final int NOTA_APROBADO = 5;
+    
+    private static int numAlumnosClase = 1;
 
-    // Nombre del alumno
+   
     private String nombre;
-    // Edad del alumno
+  
     private int edad;
-    // Numero de clase
+   
     private int numeroClase;
-    // Conjunto de notas del alumno
+   
     private ArrayListInt notas;
 
     /**
      * Constructor for objects of class Alumno
-     * @param Nombre El nombre del alumno
-     * @param Edad La edad del alumno
      */
     public Alumno(String nombre, int edad)
     {
@@ -37,19 +35,12 @@ public class Alumno
         notas = new ArrayListInt();
     }
 
-    /**
-     * Añade notas al alumno
-     * @param Nota Nota a añadir
-     */
     public void addNota(int nota)
     {
         notas.add(nota);
     }
 
-    /**
-     * Devuelve la media de las notas del alumno
-     * @return La media de las notas del alumno
-     */
+    
     public int notaMedia()
     {
         int sumatorio = 0;
@@ -61,19 +52,13 @@ public class Alumno
         return (sumatorio/notas.size());
     }
     
-    /**
-     * Devuelve si el alumno esta o no aprobado
-     * @return True si esta aprobado, false si no
-     */
+   
     public boolean aprobado()
     {
         return (notaMedia() >= NOTA_APROBADO);
     }
     
-    /**
-     * Imprime por pantalla la información del alumno
-     * @return Una string con la información del alumno
-     */
+    
     public String toString()
     {
         String info = "Nombre: " + nombre + "\nEdad: " + edad + "\nNumero de clase: " + numeroClase +  "\nNota media: " + notaMedia() + " Aprobado: " + aprobado();
